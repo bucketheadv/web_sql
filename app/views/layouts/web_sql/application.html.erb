@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebSql</title>
+<%= stylesheet_link_tag    "web_sql/application", media: "all" %>
+<%= javascript_include_tag "web_sql/application" %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="span3">&nbsp;</div>
+      <div class="span3"><h1>WebSql</h1></div>
+      <div class="span3">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<br/>
+
+<div class="admin container-fluid" id="main" style='margin-top: 4em'>
+  <div class="content span10">
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+</html>

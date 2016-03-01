@@ -1,0 +1,35 @@
+<% if flash[:error] %>
+  <div class="alert alert-error">
+  <%= flash[:error] %>
+</div>
+<% end %>
+
+<form action="" class="well form-search" method="post">
+  <% if WebSql::Model.databases.size > 0 %>
+    <select name='db'>
+    <%= options_for_select(WebSql::Model.databases.keys, params[:db]) %>
+  </select>
+<% end %>
+  <textarea name="sql" cols="150" rows="5" id="sql" style="width: 540px"><%= params[:sql] %></textarea>
+  <input type="submit" value="Query" class="btn btn-primary">
+</form>
+
+<div class="row-fluid">
+  <% if @results %>
+    <% columns = @results.columns %>
+  <table class="table table-striped table-bordered table-condensed">
+    <tr>
+      <% columns.each do |col| %>
+        <th><%= col %></th>
+      <% end %>
+    </tr>
+    <% @results.each do |res| %>
+      <tr>
+        <% columns.each do |col| %>
+          <td><%= h res[col] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+</div>
