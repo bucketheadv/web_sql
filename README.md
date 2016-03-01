@@ -4,9 +4,9 @@ This project rocks and uses MIT-LICENSE.
 
 Usage
 
-`gem web_db`
+`gem 'web_db'`
 
-Make a file `config/web_db.sql` with content below:
+Make a file `config/web_db.yml` with content below:
 
 ```
 default: &default
