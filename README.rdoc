@@ -4,6 +4,8 @@ This project rocks and uses MIT-LICENSE.
 
 Usage
 
+`gem web_db`
+
 Make a file `config/web_db.sql` with content below:
 
 ```
