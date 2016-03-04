@@ -26,7 +26,7 @@
     <% @results.each do |res| %>
       <tr>
         <% columns.each do |col| %>
-          <td><%= h res[col] %></td>
+          <td><%= h(format_time(res[col])) %></td>
         <% end %>
       </tr>
     <% end %>

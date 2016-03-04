@@ -6,7 +6,7 @@ Usage
 
 `gem 'web_db'`
 
-Make a file `config/web_db.yml` with content below:
+Make a file `config/web_db.yml` with content below, or it will use the default database:
 
 ```
 default: &default
@@ -24,3 +24,11 @@ development:
     <<: *default
     database: tribe_test
 ```
+
+In your `config/routes.rb`, add this:
+
+```
+mount WebSql::Engine => 'your_path'
+```
+
+Then visit `http://yourhost/your_path` to use it.

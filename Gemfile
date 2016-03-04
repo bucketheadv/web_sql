@@ -1,5 +1,7 @@
 source 'https://ruby.taobao.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sprockets-rails', '>= 2.1.4'
 # Declare your gem's dependencies in web_sql.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
