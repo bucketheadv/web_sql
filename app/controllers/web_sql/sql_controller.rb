@@ -15,10 +15,10 @@ module WebSql
             end
             @results = klass.connection.exec_query(set_limit(sql))
           rescue ActiveRecord::StatementInvalid => e
-            flash[:error] = "Using database: #{db}, errors: #{e.message}"
+            flash.now[:error] = "Using database: #{db}, errors: #{e.message}"
           end
         else
-          flash[:error] = "Using database: #{db}, SQL syntax error."
+          flash.now[:error] = "Using database: #{db}, SQL syntax error."
         end
       end
     end
